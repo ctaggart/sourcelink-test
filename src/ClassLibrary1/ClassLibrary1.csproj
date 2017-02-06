@@ -1,21 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
-    <RepoUri>https://raw.githubusercontent.com/stffabi/sourcelink-test</RepoUri>
-    <SourceLink>$(BaseIntermediateOutputPath)\source_link.json</SourceLink>
     <DebugType>Portable</DebugType>
   </PropertyGroup>
-  <Target Name="GenerateSourceLink" BeforeTargets="CoreCompile">
-    <Delete Files="$(SourceLink)" Condition="Exists('$(SourceLink)')" />
-    
-    <Exec Command="git rev-parse HEAD" ConsoleToMSBuild="true">
-      <Output TaskParameter="ConsoleOutput" PropertyName="LatestCommit" />
-    </Exec>
-
-    <Exec Command="git rev-parse --show-toplevel" ConsoleToMSBuild="true">
-      <Output TaskParameter="ConsoleOutput" PropertyName="GitRootFolder" />
-    </Exec>
-
-    <WriteLinesToFile File="$(SourceLink)" Lines="{&quot;documents&quot;: { &quot;$([System.IO.Path]::GetFullPath('$(GitRootFolder)/').Replace('\','\\'))*&quot; : &quot;$(RepoUri)/$(LatestCommit)/*&quot; }}" />   
-  </Target>
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-sourcelink">
+      <Version>2.0.0-b318</Version>
+    </DotNetCliToolReference>
+  </ItemGroup>
 </Project>
