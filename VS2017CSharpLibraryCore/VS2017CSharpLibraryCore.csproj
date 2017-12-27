@@ -1,14 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.4;net461</TargetFrameworks>
-    <!-- <TargetFramework>net461</TargetFramework> -->
+    <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
-
-  <Target Name="DebugPack" BeforeTargets="Pack">
-    <Message Importance="high" Text="TargetFramework: $(TargetFramework)" />
-    <Message Importance="high" Text="TargetFrameworks: $(TargetFrameworks)" />
-    <Message Importance="high" Text="AllowedOutputExtensionsInPackageBuildOutputFolder: $(AllowedOutputExtensionsInPackageBuildOutputFolder)" />
+  <Target Name="DebugEchoOff" BeforeTargets="Build">
+    <Exec Command="git rev-parse HEAD" ConsoleToMsBuild="true" EchoOff="true">
+      <Output TaskParameter="ConsoleOutput" PropertyName="SourceLinkCommit" />
+    </Exec>
+    <Message Importance="high" Text="SourceLinkCommit: $(SourceLinkCommit)" />
   </Target>
-
 </Project>

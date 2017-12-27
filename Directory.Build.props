@@ -2,14 +2,5 @@
   <PropertyGroup>
     <DebugType>portable</DebugType>
     <ci>true</ci>
-    <!-- <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder> -->
   </PropertyGroup>
-  <ItemGroup>
-    <!-- <PackageReference Include="SourceLink.Create.GitHub" Version="2.7.0-b626" PrivateAssets="all" /> -->
-    <PackageReference Include="SourceLink.Create.CommandLine" Version="2.7.0-b626" PrivateAssets="all" />
-    <PackageReference Include="SourceLink.Embed.PaketFiles" Version="2.7.0-b626" PrivateAssets="all" />
-    <PackageReference Include="SourceLink.Test" Version="2.7.0-b626" PrivateAssets="all" />
-    <DotNetCliToolReference Include="dotnet-sourcelink-git" Version="2.7.0-b626" />
-    <DotNetCliToolReference Include="dotnet-sourcelink" Version="2.7.0-b626" />
-  </ItemGroup>
 </Project>
