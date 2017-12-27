@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.4;net461</TargetFrameworks>
+    <!-- <TargetFramework>net461</TargetFramework> -->
   </PropertyGroup>
+
+  <Target Name="DebugPack" BeforeTargets="Pack">
+    <Message Importance="high" Text="TargetFramework: $(TargetFramework)" />
+    <Message Importance="high" Text="TargetFrameworks: $(TargetFrameworks)" />
+    <Message Importance="high" Text="AllowedOutputExtensionsInPackageBuildOutputFolder: $(AllowedOutputExtensionsInPackageBuildOutputFolder)" />
+  </Target>
 
 </Project>
