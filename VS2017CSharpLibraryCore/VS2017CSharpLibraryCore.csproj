@@ -5,6 +5,14 @@
     <!-- <TargetFramework>net461</TargetFramework> -->
   </PropertyGroup>
 
+  <!-- <ItemGroup>
+    <EmbeddedFiles Include="$(IntermediateOutputPath)FSComp.fs" />
+    <EmbeddedFiles Include="$(IntermediateOutputPath)FSIStrings.fs" />
+  </ItemGroup> -->
+  <!-- <ItemGroup>
+    <EmbeddedFiles Include="a.fs" />
+  </ItemGroup> -->
+
   <Target Name="DebugPack" BeforeTargets="Pack">
     <Message Importance="high" Text="TargetFramework: $(TargetFramework)" />
     <Message Importance="high" Text="TargetFrameworks: $(TargetFrameworks)" />
