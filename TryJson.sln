@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryJson", "TryJson\TryJson.csproj", "{250BF23D-C512-4B4E-B3AB-4B66F512995E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryJson", "TryJson\TryJson.csproj", "{250BF23D-C512-4B4E-B3AB-4B66F512995E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryJsonNetFramework", "TryJsonNetFramework\TryJsonNetFramework.csproj", "{4F13143A-3002-492F-979F-3A75FEDD2CA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{250BF23D-C512-4B4E-B3AB-4B66F512995E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250BF23D-C512-4B4E-B3AB-4B66F512995E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{250BF23D-C512-4B4E-B3AB-4B66F512995E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F13143A-3002-492F-979F-3A75FEDD2CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F13143A-3002-492F-979F-3A75FEDD2CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F13143A-3002-492F-979F-3A75FEDD2CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F13143A-3002-492F-979F-3A75FEDD2CA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
